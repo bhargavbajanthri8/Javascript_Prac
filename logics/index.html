@@ -1,0 +1,239 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 16 Logics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript</h1>
+        <p>HTML + CSS + JavaScript Practice Project</p>
+    </header>
+
+
+    <main class="container">
+
+        <!-- 1. Average of 3 Numbers -->
+        <section class="card">
+            <h2>1. Average of 3 Numbers</h2>
+
+            <input type="number" id="avg1" placeholder="Enter first number">
+            <input type="number" id="avg2" placeholder="Enter second number">
+            <input type="number" id="avg3" placeholder="Enter third number">
+
+            <button onclick="averageThree()">Calculate</button>
+
+            <div id="avgResult" class="result"></div>
+        </section>
+
+
+        <!-- 2. Average of 3 Numbers using DOM -->
+        <section class="card">
+            <h2>2. Average of 3 Numbers Using DOM</h2>
+
+            <input type="number" id="domAvg1" placeholder="Enter first number">
+            <input type="number" id="domAvg2" placeholder="Enter second number">
+            <input type="number" id="domAvg3" placeholder="Enter third number">
+
+            <button onclick="averageThreeDOM()">Calculate</button>
+
+            <div id="domAvgResult" class="result"></div>
+        </section>
+
+
+        <!-- 3. Sum of n Natural Numbers -->
+        <section class="card">
+            <h2>3. Sum of First n Natural Numbers</h2>
+
+            <input type="number" id="sumN" placeholder="Enter n">
+
+            <button onclick="sumNatural()">Calculate</button>
+
+            <div id="sumResult" class="result"></div>
+        </section>
+
+
+        <!-- 4. Average of n Natural Numbers -->
+        <section class="card">
+            <h2>4. Average of First n Natural Numbers</h2>
+
+            <input type="number" id="averageN" placeholder="Enter n">
+
+            <button onclick="averageNatural()">Calculate</button>
+
+            <div id="averageNResult" class="result"></div>
+        </section>
+
+
+        <!-- 5. Profit Percentage -->
+        <section class="card">
+            <h2>5. Profit Percentage</h2>
+
+            <input type="number" id="costPrice" placeholder="Cost Price">
+            <input type="number" id="sellingPrice" placeholder="Selling Price">
+
+            <button onclick="profitPercentage()">Calculate</button>
+
+            <div id="profitResult" class="result"></div>
+        </section>
+
+
+        <!-- 6. Simple Interest -->
+        <section class="card">
+            <h2>6. Simple Interest</h2>
+
+            <input type="number" id="principal" placeholder="Principal">
+            <input type="number" id="rate" placeholder="Rate">
+            <input type="number" id="time" placeholder="Time">
+
+            <button onclick="simpleInterest()">Calculate</button>
+
+            <div id="interestResult" class="result"></div>
+        </section>
+
+
+        <!-- 7. Missing Angle -->
+        <section class="card">
+            <h2>7. Missing Angle of Triangle</h2>
+
+            <input type="number" id="angle1" placeholder="First angle">
+            <input type="number" id="angle2" placeholder="Second angle">
+
+            <button onclick="missingAngle()">Calculate</button>
+
+            <div id="angleResult" class="result"></div>
+        </section>
+
+
+        <!-- 8. Last Digit -->
+        <section class="card">
+            <h2>8. Last Digit of a Number</h2>
+
+            <input type="number" id="lastDigitNumber" placeholder="Enter number">
+
+            <button onclick="lastDigit()">Find Last Digit</button>
+
+            <div id="lastDigitResult" class="result"></div>
+        </section>
+
+
+        <!-- 9. Remove Last Digit -->
+        <section class="card">
+            <h2>9. Remove Last Digit</h2>
+
+            <input type="number" id="removeDigitNumber" placeholder="Enter number">
+
+            <button onclick="removeLastDigit()">Remove</button>
+
+            <div id="removeDigitResult" class="result"></div>
+        </section>
+
+
+        <!-- 10. First Digit 3 Digit -->
+        <section class="card">
+            <h2>10. First Digit of a 3-Digit Number</h2>
+
+            <input type="number" id="threeDigitNumber" placeholder="Enter 3-digit number">
+
+            <button onclick="firstDigitThree()">Find First Digit</button>
+
+            <div id="threeDigitResult" class="result"></div>
+        </section>
+
+
+        <!-- 11. First Digit 5 Digit -->
+        <section class="card">
+            <h2>11. First Digit of a 5-Digit Number</h2>
+
+            <input type="number" id="fiveDigitNumber" placeholder="Enter 5-digit number">
+
+            <button onclick="firstDigitFive()">Find First Digit</button>
+
+            <div id="fiveDigitResult" class="result"></div>
+        </section>
+
+
+        <!-- 12. Celsius to Fahrenheit -->
+        <section class="card">
+            <h2>12. Celsius → Fahrenheit</h2>
+
+            <input type="number" id="celsius" placeholder="Enter Celsius">
+
+            <button onclick="celsiusToFahrenheit()">Convert</button>
+
+            <div id="celsiusResult" class="result"></div>
+        </section>
+
+
+        <!-- 13. Fahrenheit to Celsius -->
+        <section class="card">
+            <h2>13. Fahrenheit → Celsius</h2>
+
+            <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+
+            <button onclick="fahrenheitToCelsius()">Convert</button>
+
+            <div id="fahrenheitResult" class="result"></div>
+        </section>
+
+
+        <!-- 14. Gross Salary -->
+        <section class="card">
+            <h2>14. Gross Salary</h2>
+
+            <input type="number" id="basicSalary" placeholder="Basic Salary">
+            <input type="number" id="hra" placeholder="HRA">
+            <input type="number" id="da" placeholder="DA">
+
+            <button onclick="grossSalary()">Calculate</button>
+
+            <div id="salaryResult" class="result"></div>
+        </section>
+
+
+        <!-- 15. Swap Using Third Variable -->
+        <section class="card">
+            <h2>15. Swap Using Third Variable</h2>
+
+            <input type="number" id="swapA" placeholder="Enter A">
+            <input type="number" id="swapB" placeholder="Enter B">
+
+            <button onclick="swapWithThird()">Swap</button>
+
+            <div id="swapThirdResult" class="result"></div>
+        </section>
+
+
+        <!-- 16. Swap Without Third Variable -->
+        <section class="card">
+            <h2>16. Swap Without Third Variable</h2>
+
+            <input type="number" id="swapX" placeholder="Enter X">
+            <input type="number" id="swapY" placeholder="Enter Y">
+
+            <button onclick="swapWithoutThird()">Swap</button>
+
+            <div id="swapWithoutResult" class="result"></div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>JavaScript Practice Project | 16 Logics</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
